@@ -5,6 +5,7 @@ Automates the Device Hash pull of devices and moves it to an Azure Blob (does no
 
 #Install Autopilot Script from Powershell Gallery 
 write-host "Pulling Autopilot Script and Enabling WinRM" -ForegroundColor Green
+Install-PackageProvider -name NuGet -MinimumVersion 2.8.5.201 -force 
 install-script -name get-windowsautopilotinfo -Force
 Enable-PSRemoting -SkipNetworkProfileCheck -Force | Out-Null
 
