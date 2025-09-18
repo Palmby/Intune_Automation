@@ -28,7 +28,7 @@ Get-ChildItem C:\devicehash/AzCopy/*/azcopy.exe | Move-Item -Destination C:\devi
 
 Get-WindowsAutoPilotInfo.ps1 -outputfile "C:\devicehash\$env:COMPUTERNAME.csv" -append 
 
-C:\temp\azcopy.exe copy "C:\devicehash\$env:COMPUTERNAME.csv" #BLOB SAS SIGNATURE""
+C:\devicehash\azcopy.exe copy "C:\devicehash\$env:COMPUTERNAME.csv" #BLOB SAS SIGNATURE""
 
 
 remove-item C:\devicehash -Recurse -Force
